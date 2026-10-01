@@ -1,6 +1,5 @@
 #  Hotel Operations & Revenue Management: EDA Analytics Case Study
 
-[![GitHub License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](https://www.python.org/)
 [![Dataset](https://img.shields.io/badge/Dataset-Hotel%20Booking%20Demand-red.svg)](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand)
 

@@ -1,10 +1,7 @@
-#  Hotel Operations & Revenue Analytics: Solution Guide & Implementation Blueprint
+#  Hotel Operations & Revenue Analytics: Solution Guide 
 
 [![Analysis Notebook](https://img.shields.io/badge/Jupyter-Notebook-brightgreen.svg)](Kaggle%20Worksheet/eda02-hotel-operations-analysis%20.ipynb)
 [![Dataset](https://img.shields.io/badge/Dataset-87%2C396%20Clean%20Rows-blue.svg)](Raw_Data/hotel_bookings.csv)
-
-
-This document provides the definitive, mathematically verified solutions, Python implementations, statistical evaluations, and executive business recommendations for each research question posed in [CASE_STUDY.md](CASE_STUDY.md).
 
 ---
 
@@ -705,5 +702,4 @@ plt.show()
 +--------------------------+------------------------------------+------------------------------------+
 ```
 
----
-*Verified against the 87,396 de-duplicated hotel booking records.*
+

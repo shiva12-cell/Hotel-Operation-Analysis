@@ -46,8 +46,6 @@ This repository contains full production-grade documentation tailored for data a
 
 ##  Visual Analytics Gallery
 
-All visualizations are generated at high resolution ($300\text{ DPI}$) and stored in the [`H-Ops Images/`](H-Ops%20Images/) directory:
-
 | Visual Representation | File Reference | Core Operational Insight |
 |:---:|:---:|:---|
 | **Property Demand Distribution** | [`Hotel vs Booking.png`](H-Ops%20Images/Hotel%20vs%20Booking.png) | City Hotels account for **61.1%** of reservations (53,428 bookings) vs. **38.9%** for Resort Hotels (33,968 bookings). |
@@ -63,52 +61,15 @@ All visualizations are generated at high resolution ($300\text{ DPI}$) and store
 ##  Econometric & Statistical Modeling Highlights
 
 ### 1. Multivariate Cancellation Risk (Logistic Regression)
-$$\ln\left(\frac{P(\text{Canceled})}{1 - P(\text{Canceled})}\right) = \beta_0 + 0.0050 \cdot (\text{lead\_time}) - 0.4943 \cdot (\text{booking\_changes}) - 0.3852 \cdot (\text{special\_requests})$$
+
 * **Lead Time ($e^{\beta} = 1.0050$):** Every 100 days of lead time increases cancellation odds by **$+64.8\%$**.
 * **Booking Modifications ($e^{\beta} = 0.6100$):** Each modification decreases cancellation odds by **$-39.0\%$**.
 * **Special Requests ($e^{\beta} = 0.6803$):** Each amenity request decreases cancellation odds by **$-32.0\%$**.
 
 ### 2. Party Demographic Pricing Elasticity (OLS Regression)
-$$\text{ADR} = €61.18 + €21.18 \cdot (\text{adults}) + €38.66 \cdot (\text{children}) + €6.71 \cdot (\text{babies})$$
-* $R^2 = 0.165, \quad F(3, 87392) = 5,752, \quad p < 0.0001$
+
 * **Children add nearly double the rate premium of an adult (+€38.66 vs. +€21.18)** due to mandatory allocation into family suites and premium multi-bed room layouts.
-
----
-
----
-
-##  Quickstart & Installation
-
-To run the analysis locally or replicate the econometric models:
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/hotel-operations-analysis.git
-cd hotel-operations-analysis
-```
-
-### 2. Set Up a Virtual Environment
-```bash
-# Create virtual environment
-python -m venv venv
-
-# Activate on Windows:
-.\venv\Scripts\activate
-
-# Activate on macOS/Linux:
-source venv/bin/activate
-```
-
-### 3. Install Required Dependencies
-```bash
-pip install pandas numpy matplotlib seaborn statsmodels scikit-learn jupyter
-```
-
-### 4. Launch Jupyter Notebook
-```bash
-jupyter notebook "Kaggle Worksheet/eda02-hotel-operations-analysis .ipynb"
-```
-
+  
 ---
 
 ##  Authors & Acknowledgments

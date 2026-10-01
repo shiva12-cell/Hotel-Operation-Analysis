@@ -17,7 +17,7 @@ This repository contains full production-grade documentation tailored for data a
 | [**CASE_STUDY.md**](CASE_STUDY.md) | **Problem Statement & Curriculum** | Business context, core dilemmas, exhaustive **34-variable Data Dictionary**, and **24 curated analytical questions** structured across Basic, Medium, and Advanced tiers. |
 |  [**SOLUTION_GUIDE.md**](SOLUTION_GUIDE.md) | **Verified Solutions & Code** | Complete numerical solutions, step-by-step mathematical derivations, production Python snippets, statistical evaluations, and executive business recommendations for all 24 questions. |
 |  [**ADDITIONAL_RESOURCES.md**](ADDITIONAL_RESOURCES.md) | **Further Exploration** | Academic journal citations, hospitality formula handbook (RevPAR, GOPPAR, Critical Ratio Overbooking), recommended Python ML stack, and 4 advanced capstone extensions. |
-|  [**Jupyter Notebook**](Kaggle%20Worksheet/eda02-hotel-operations-analysis%20.ipynb) | **Interactive Analysis** | Executable notebook containing end-to-end data cleaning, EDA, visualizations, and econometric models. |
+|  [**Kaggle Notebook**](Kaggle%20Worksheet/eda02-hotel-operations-analysis%20.ipynb) | **Interactive Analysis** | Executable notebook containing end-to-end data cleaning, EDA, visualizations, and econometric models. |
 
 ---
 

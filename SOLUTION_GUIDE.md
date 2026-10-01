@@ -1,7 +1,8 @@
 #  Hotel Operations & Revenue Analytics: Solution Guide 
 
 [![Analysis Notebook](https://img.shields.io/badge/Jupyter-Notebook-brightgreen.svg)](Kaggle%20Worksheet/eda02-hotel-operations-analysis%20.ipynb)
-[![Hotel Bookings Dataset](https://github.com/shiva12-cell/Hotel-Operation-Analysis/blob/main/Raw_Data)
+[Dataset](https://github.com/shiva12-cell/Hotel-Operation-Analysis/blob/main/Raw_Data)
+
 
 ---
 

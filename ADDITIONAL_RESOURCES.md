@@ -1,23 +1,11 @@
-# 📚 Hotel Operations & Revenue Analytics: Additional Resources & Exploration Guide
+#  Hotel Operations & Revenue Analytics: Additional Resources & Exploration Guide
 
 [![Documentation](https://img.shields.io/badge/Documentation-Case%20Study-blue.svg)](CASE_STUDY.md)
 [![Solutions](https://img.shields.io/badge/Solutions-Verified%20Guide-success.svg)](SOLUTION_GUIDE.md)
-[![Reading Time](https://img.shields.io/badge/reading%20time-10%20min-lightgrey.svg)]()
-
-This curated resource guide provides foundational academic literature, standard hospitality metrics and formulas, recommended Python data science tooling, and advanced capstone extension projects for researchers, data scientists, and hospitality revenue managers.
 
 ---
 
-## 📑 Table of Contents
-1. [Primary Dataset Citation & Academic Literature](#1-primary-dataset-citation--academic-literature)
-2. [Hospitality Industry Metrics & Mathematical Formulas](#2-hospitality-industry-metrics--mathematical-formulas)
-3. [Recommended Python Data Science & ML Stack](#3-recommended-python-data-science--ml-stack)
-4. [Advanced Project Extensions & Capstone Ideas](#4-advanced-project-extensions--capstone-ideas)
-5. [Industry Benchmark Databases & Professional Bodies](#5-industry-benchmark-databases--professional-bodies)
-
----
-
-## 🔬 1. Primary Dataset Citation & Academic Literature
+##  1. Primary Dataset Citation & Academic Literature
 
 The data utilized in this study was collected directly from the Property Management Systems (PMS) of two real-world hotels in Portugal (City Hotel in Lisbon and Resort Hotel in the Algarve) and published in peer-reviewed scientific journals.
 
@@ -82,17 +70,12 @@ In professional hospitality management, operational performance is benchmarked t
 
 ### Overbooking Optimization Model (Spoilage vs. Spillage)
 To maximize expected revenue $E[R]$, revenue managers solve the critical ratio problem:
-$$\text{Critical Ratio (CR)} = \frac{C_u}{C_u + C_o}$$
 Where:
-* $C_u$ (**Cost of Underage / Spoilage**): Opportunity cost of leaving an unsold room empty ($= \text{ADR} - \text{Marginal Cleaning Cost}$).
-* $C_o$ (**Cost of Overage / Spillage**): The cost of "walking" an overbooked guest to a competitor hotel ($= \text{Alternative Room Rate} + \text{Transportation} + \text{Goodwill Penalty}$).
-
-The optimal target booking capacity $Q^*$ satisfies:
-$$P(\text{Cancellations} + \text{No-Shows} \le Q^* - \text{Capacity}) = \frac{C_u}{C_u + C_o}$$
-
+*  (**Cost of Underage / Spoilage**): Opportunity cost of leaving an unsold room empty ($= \text{ADR} - \text{Marginal Cleaning Cost}$).
+*  (**Cost of Overage / Spillage**): The cost of "walking" an overbooked guest to a competitor hotel ($= \text{Alternative Room Rate} + \text{Transportation} + \text{Goodwill Penalty}$).
 ---
 
-## 🛠️ 3. Recommended Python Data Science & ML Stack
+##  3. Recommended Python Data Science & ML Stack
 
 To extend the exploratory analysis in this repository into enterprise-grade production services, the following open-source ecosystem is recommended:
 
@@ -108,7 +91,7 @@ To extend the exploratory analysis in this repository into enterprise-grade prod
 
 ---
 
-## 🚀 4. Advanced Project Extensions & Capstone Ideas
+##  4. Advanced Project Extensions & Capstone Ideas
 
 The data and solutions in this repository provide an ideal foundation for portfolio-grade advanced projects:
 
@@ -144,7 +127,7 @@ The data and solutions in this repository provide an ideal foundation for portfo
 
 ---
 
-## 🌐 5. Industry Benchmark Databases & Professional Bodies
+##  5. Industry Benchmark Databases & Professional Bodies
 
 For real-world comparative studies and market trend intelligence, consult:
 
@@ -153,5 +136,4 @@ For real-world comparative studies and market trend intelligence, consult:
 * **HSMAI (Hospitality Sales & Marketing Association International):** Industry standards and certification for Certified Revenue Management Executives (CRME) ([hsmai.org](https://hsmai.org)).
 * **UN Tourism (formerly UNWTO):** Global tourism statistics, regional travel recovery reports, and border arrivals data ([unwto.org](https://www.unwto.org)).
 
----
-*Maintained as part of the Hotel Operations & Revenue Analytics Case Study repository.*
+

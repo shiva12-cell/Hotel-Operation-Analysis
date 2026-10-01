@@ -1,9 +1,9 @@
 #  Hotel Operations & Revenue Analytics: Comprehensive Case Study
 
-[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-brightgreen.svg)](https://www.python.org/)
 [![Dataset](https://img.shields.io/badge/dataset-Hotel%20Booking%20Demand-orange.svg)](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand)
-[![Domain](https://img.shields.io/badge/domain-Hospitality%20%26%20Revenue%20Management-purple.svg)]()
+
 
 ---
 

@@ -1,79 +1,55 @@
-#  Hotel Operations & Revenue Management: EDA Analytics Case Study
+# Hotel Operations & Revenue Management Analysis
 
-[![Python Version](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](https://www.python.org/)
-[![Dataset](https://img.shields.io/badge/Dataset-Hotel%20Booking%20Demand-red.svg)](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand)
+- **Domain:** Hospitality Analytics, Yield Management & Revenue Econometrics
+- **Primary Tech Stack:** Python 3.10+ (`pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`, `statsmodels`)
 
-
-> An industry-grade data science and revenue management case study analyzing **87,396 validated hotel bookings** across City and Resort properties. This project diagnoses booking cancellation volatility, investigates distribution channel economics, evaluates price elasticity using econometrics, and formulates strategic operational policies for hospitality executives.
-
----
-
-##  Repository Documentation Index
-
-This repository contains full production-grade documentation tailored for data analysts, data scientists, revenue managers, and academic researchers:
-
-| Document | Primary Focus | Key Contents |
-|:---|:---|:---|
-| [**CASE_STUDY.md**](CASE_STUDY.md) | **Problem Statement & Curriculum** | Business context, core dilemmas, exhaustive **34-variable Data Dictionary**, and **24 curated analytical questions** structured across Basic, Medium, and Advanced tiers. |
-|  [**SOLUTION_GUIDE.md**](SOLUTION_GUIDE.md) | **Verified Solutions & Code** | Complete numerical solutions, step-by-step mathematical derivations, production Python snippets, statistical evaluations, and executive business recommendations for all 24 questions. |
-|  [**ADDITIONAL_RESOURCES.md**](ADDITIONAL_RESOURCES.md) | **Further Exploration** | Academic journal citations, hospitality formula handbook (RevPAR, GOPPAR, Critical Ratio Overbooking), recommended Python ML stack, and 4 advanced capstone extensions. |
-|  [**Kaggle Notebook**](Kaggle%20Worksheet/eda02-hotel-operations-analysis%20.ipynb) | **Interactive Analysis** | Executable notebook containing end-to-end data cleaning, EDA, visualizations, and econometric models. |
+- **Core Scope:** End-to-end data science and revenue management case study analyzing 87,396 validated hotel reservations across City and Resort properties to evaluate cancellation risk, channel profitability, pricing elasticity, and operational efficiency.
 
 ---
 
-##  Key Analytical Insights At-a-Glance
+## Executive Summary
+In the hospitality industry, severe cancellation volatility and over-reliance on third-party Online Travel Agencies (OTAs) erode room yields, create operational friction, and compress net operating margins. 
 
-```
-+----------------------------------------------------------------------------------------------------+
-|                                      EXECUTIVE KPI SUMMARY                                         |
-+--------------------------+-----------------------+-------------------------------------------------+
-| Metric                   | Value                 | Operational Significance                        |
-+--------------------------+-----------------------+-------------------------------------------------+
-| Total Analyzed Cohort    | 87,396 records        | 31,994 duplicate rows removed (119,390 raw)     |
-| Portfolio Cancellation   | 27.49% (24,025 rooms) | City Hotel: 30.04% vs. Resort Hotel: 23.48%     |
-| Average Daily Rate (ADR) | €106.33 overall       | City Hotel (€110.99) commands +12.1% over Resort|
-| Peak Arrival Month       | August (11,257 rooms) | August also exhibits peak cancellations (32.2%) |
-| Average Lead Time        | 79.89 days (Mean)     | Median: 49 days; positive correlation with churn|
-| Top Distribution Channel | TA/TO (79.11% volume) | Extreme intermediary reliance (86.05% via agents|
-| Highest Net-Margin Ch.   | Direct (€116.58 ADR)  | Zero OTA commission vs. €96.90 net OTA yield    |
-| Length of Stay (LOS)     | 3.64 nights overall   | Weekdays: 2.63 nights | Weekends: 1.01 nights   |
-| Repeat Guest Stay Length | 1.93 nights           | Repeat guests stay ~50% shorter than new guests |
-| Special Requests Impact  | -32.0% Cancel Odds    | Submitting requests signals strong travel intent|
-+--------------------------+-----------------------+-------------------------------------------------+
+This case study performs an in-depth exploratory, statistical, and econometric analysis on 87,396 deduped hotel bookings across City and Resort properties. The study isolates structural drivers of reservation churn, models multi-year Average Daily Rate (ADR) dynamics, quantifies channel commission leakages, and estimates price elasticity. The findings demonstrate that booking lead times directly amplify cancellation probability, special amenity requests serve as potent commitments against churn, and direct bookings generate superior net margins compared to intermediary-driven channels.
+
+---
+
+## Key Metrics
+- **Analyzed Cohort:** 87,396 validated, unique bookings (31,994 duplicates cleaned from 119,390 raw records).
+- **Portfolio Cancellation Rate:** 27.49% overall (City Hotel: 30.04% | Resort Hotel: 23.48%).
+- **Average Daily Rate (ADR):** €106.33 portfolio average (City Hotel at €110.99 outpaces Resort Hotel at €99.03 by +12.1%).
+- **Lead Time Exposure:** 79.89 days mean lead time (median: 49 days); reservations booked >180 days in advance exhibit cancellation rates exceeding 42%.
+- **Distribution Channel Concentration:** Travel Agents/Tour Operators (TA/TO) control 79.11% of booking volume; Online TAs account for 59.1% (51,618 bookings).
+- **Net Channel Yield:** Direct bookings achieve €116.58 ADR with zero commission drag versus €96.90 net yield for OTAs after standard intermediary fees.
+- **Commitment Multipliers:** Each submitted special request reduces cancellation odds by 32.0% ($e^{\beta} = 0.6803$), and each reservation modification reduces cancellation odds by 39.0% ($e^{\beta} = 0.6100$).
+- **Family Demographic Premium:** Each child adds +€38.66 to room ADR versus +€21.18 for an adult in OLS econometric pricing models.
+
+---
+
+## Repository Structure
+```text
+Hotel-Operation-Analysis/
+│
+├── Raw_Data/                               # Raw and preprocessed hotel booking demand datasets
+├── H-Ops Images/                           # Analytical visualizations and chart exhibits
+├── Kaggle Worksheet/                       # Executable Jupyter/Kaggle analysis notebook
+│   └── eda02-hotel-operations-analysis .ipynb
+├── CASE_STUDY.md                           # Business problem statement, data dictionary & 24 question tiers
+├── SOLUTION_GUIDE.md                       # Comprehensive numerical solutions, derivations & code
+├── ADDITIONAL_RESOURCES.md                 # Hospitality formula handbook (RevPAR, GOPPAR) & academic citations
+└── README.md                               # Primary project documentation
 ```
 
 ---
 
-##  Visual Analytics Gallery
-
-| Visual Representation | File Reference | Core Operational Insight |
-|:---:|:---:|:---|
-| **Property Demand Distribution** | [`Hotel vs Booking.png`](H-Ops%20Images/Hotel%20vs%20Booking.png) | City Hotels account for **61.1%** of reservations (53,428 bookings) vs. **38.9%** for Resort Hotels (33,968 bookings). |
-| **Arrival Seasonality** | [`Booking over Arrival Month.png`](H-Ops%20Images/Booking%20over%20Arrival%20Month.png) | European summer holiday peak in July & August; winter trough in November & January. |
-| **Market Segment Volume** | [`Booking via Market Segment.png`](H-Ops%20Images/Booking%20via%20Market%20Segment.png) | Online TAs dominate overall transaction volume with **51,618 bookings** (59.1% of market). |
-| **Segment ADR Hierarchy** | [`Average Daily Rate (ADR) per Market Segment.png`](H-Ops%20Images/Average%20Daily%20Rate%20(ADR)%20per%20Market%20Segment.png) | Online TA (€118.17) and Direct (€116.58) generate the highest ADRs; Groups (€74.86) and Corporate (€68.15) reflect contract discounts. |
-| **Lead Time vs. Cancellation** | [`Scatter Plot _ Lead Time vs Cancellation Rate.png`](H-Ops%20Images/Scatter%20Plot%20_%20Lead%20Time%20vs%20Cancellation%20Rate.png) | Positive correlation ($r = 0.185$); long lead-time reservations ($> 180$ days) experience cancellation rates exceeding $42\%$. |
-| **Lead Time by Market Segment** | [`Booking Lead Time Distribution by Market Segment.png`](H-Ops%20Images/Booking%20Lead%20Time%20Distribution%20by%20Market%20Segment.png) | Offline TA/TO and Groups hold the longest advance booking windows (median $> 75-100$ days). |
-| **Longitudinal ADR Growth** | [`Trend of Average Daily Rate (ADR) Over the Years.png`](H-Ops%20Images/Trend%20of%20Average%20Daily%20Rate%20(ADR)%20Over%20the%20Years.png) | Consistent compounding room yields: €92.16 (2015) $\rightarrow$ €101.54 (2016) $\rightarrow$ €118.71 (2017). |
-
----
-
-##  Econometric & Statistical Modeling Highlights
-
-### 1. Multivariate Cancellation Risk (Logistic Regression)
-
-* **Lead Time ($e^{\beta} = 1.0050$):** Every 100 days of lead time increases cancellation odds by **$+64.8\%$**.
-* **Booking Modifications ($e^{\beta} = 0.6100$):** Each modification decreases cancellation odds by **$-39.0\%$**.
-* **Special Requests ($e^{\beta} = 0.6803$):** Each amenity request decreases cancellation odds by **$-32.0\%$**.
-
-### 2. Party Demographic Pricing Elasticity (OLS Regression)
-
-* **Children add nearly double the rate premium of an adult (+€38.66 vs. +€21.18)** due to mandatory allocation into family suites and premium multi-bed room layouts.
-  
----
-
-##  Authors & Acknowledgments
-* **Dataset Creators:** Nuno Antonio, Ana de Almeida, and Luis Nunes (*Data in Brief*, 2019).
-* **Analysis & Implementation:** Hospitality Data Science & Revenue Analytics Pair Programming Project.
-
----
+## Strategic Recommendations
+1. **Dynamic Tiered Cancellation & Deposit Policies:**
+   - Enforce non-refundable rates or progressive non-refundable deposits on reservations with lead times extending beyond 60–90 days, targeting high-risk cohorts where churn exceeds 40%.
+2. **Shift Share Toward High-Yield Direct Channels:**
+   - Offer guaranteed room upgrades, complimentary breakfast, or loyalty incentives on direct booking engines to divert demand from high-commission OTAs (15–20% fee drag) toward zero-commission direct bookings (€116.58 gross ADR).
+3. **Capitalize on Peak Seasonal Rate Inelasticity:**
+   - Implement assertive yield management during July and August peaks by raising minimum length of stay (LOS) restrictions and narrowing discount allocations to maximize RevPAR.
+4. **Leverage Pre-Arrival Engagement to Reduce Churn:**
+   - Prompt guests via automated pre-stay messaging to submit room preferences and special requests. Engaging guests with personalization significantly lowers cancellation probability (-32% odds per request).
+5. **Tailored Family Packaging & Suite Upselling:**
+   - Design dedicated family packages with multi-bed arrangements and child-friendly amenities, capitalizing on the high empirical willingness-to-pay (+€38.66 ADR premium per child).
